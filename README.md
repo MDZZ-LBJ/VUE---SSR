@@ -28,17 +28,22 @@
 
 ### 安装依赖
   cnpm install vue-server-renderer （渲染器）
+  
   cnpm install express  （服务器，这里用node的后台）
+  
   cnpm install cross-env （跨平台打包脚本） 
+  
   cnpm install webpack-node-externals （webpack优化配置）
+  
   cnpm install lodash.merge （合并bundle文件）
 
-### 构建流程：
-      server bundle ：是用来处理前端请求对应的页面，将其编译成html。
-      client bundle ：是用来打包一些和这个页面有关的代码，用于将这个静态的html页面激活
+### 构建流程
+
+ server bundle ：是用来处理前端请求对应的页面，将其编译成html。
+ client bundle ：是用来打包一些和这个页面有关的代码，用于将这个静态的html页面激活
                       成一个可用的spa页面。 
   
-      所以：将来webpack打包的时候要有两个入口文件，生成两个包 即 server bundle ，client bundle，
+ 所以：将来webpack打包的时候要有两个入口文件，生成两个包 即 server bundle ，client bundle，
             最后返回给前端(浏览器)的是这两个包结合生成的html的字符串，然后我们再去激活
 
 ### 关键步骤
